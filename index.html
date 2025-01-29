@@ -20,6 +20,10 @@
       crossorigin="anonymous"
     ></script>
     <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -30,16 +34,21 @@
           <a href="#">Induz.</a>
         </div>
 
-        <ul class="nav__links" id="nav-links">
+        <button
+          area-controls="nav-links"
+          aria-expanded="false"
+          class="mobile-nav-toggle"
+        >
+          <span class="sr-only">menu</span>
+        </button>
+
+        <ul class="nav__links" id="nav-links" data-visible="false">
           <li class="link"><a href="#home">Home</a></li>
           <li class="link"><a href="#about">About</a></li>
           <li class="link"><a href="#stats">Stats</a></li>
           <li class="link"><a href="#blog">Blog</a></li>
           <li class="link"><a href="#subscribe">Subscribe</a></li>
         </ul>
-        <div class="nav__menu-btn" id="menu-btn">
-          <span></span>
-        </div>
       </nav>
 
       <!-- Home -->
@@ -166,7 +175,7 @@
       <!-- Blog -->
       <section class="blog" id="blog">
         <div class="section__container blog__container">
-          <div class="psection__subheader">Our Posts</div>
+          <div class="section__subheader">Our Posts</div>
           <h2 class="section__header">BLog Posts</h2>
           <div class="blog__grid">
             <div class="blog__card">
@@ -213,9 +222,181 @@
           </div>
         </div>
       </section>
+
+      <!-- Subscribe to Newsletter area -->
+      <section class="subscribe" id="subscribe">
+        <div class="section__container subscribe__container">
+          <div class="subscribe__grid">
+            <div>
+              <p class="section__subheader">Newsletter</p>
+              <h2 class="section__header">
+                Subscribe To Get The Latest News & Updates
+              </h2>
+              <p class="para">
+                Our newsletter is a great way to keep up to date with the latest
+                news and updates from our company.
+              </p>
+            </div>
+            <div class="subscribe__form-container">
+              <form action="/">
+                <label class="sr-only" for="fullname">Full name</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Enter your full name"
+                />
+                <label class="sr-only" for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email" />
+                <button class="btn btn__primary">Subscribe</button>
+              </form>
+              <p class="para">
+                By submitting this to our Newsletter, you agree to our
+                <a href="#">privacy policy</a> and
+                <a href="#">terms of service</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer area -->
+      <section class="customer">
+        <div class="section__container customer__container">
+          <p class="section__subheader">Testimonials</p>
+          <h2 class="section__header">What Our Customers Say</h2>
+          <p class="para">
+            Discover what our valued customers have to say about their
+            experiences partnering with Induz. At Induz, we take pride in
+            delivering exceptional industrial solutions and services, and
+            nothing speaks louder than the words of those who have entrusted us
+            with their projects.
+          </p>
+          <div class="customer__review">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="customer__review__card">
+                    <span><i class="ri-double-quotes-r"></i></span>
+                    <p>
+                      Working with Induz has been a game-changer for our
+                      manufacturing operations. Their precision-engineered
+                      machinery and expert guidance have not only improved
+                      efficiency but also reduced downtime significantly. It's
+                      more than a partnership; it's a strategic advantage.
+                    </p>
+                    <div class="customer__review__details">
+                      <img src="assets/customer-1.jpg" alt="customer" />
+                      <div>
+                        <h4>John Smith</h4>
+                        <h5>Industrialist</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="customer__review__card">
+                    <span><i class="ri-double-quotes-r"></i></span>
+                    <p>
+                      In the construction industry, deadlines and quality are
+                      non-negotiable. Induz consistently delivered on both
+                      fronts. Their dedication to project management and their
+                      skilled workforce made our project a seamless success.
+                      We're grateful for their expertise.
+                    </p>
+                    <div class="customer__review__details">
+                      <img src="assets/customer-2.jpg" alt="customer" />
+                      <div>
+                        <h4>Laura Rodriguez</h4>
+                        <h5>CEO & Founder</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="customer__review__card">
+                    <span><i class="ri-double-quotes-r"></i></span>
+                    <p>
+                      The logistics solutions provided by Induz have streamlined
+                      our supply chain like never before. Their innovative
+                      approach and attention to detail saved us time and
+                      resources, ultimately boosting our bottom line. They're
+                      more than a vendor; they're a partner in our success.
+                    </p>
+                    <div class="customer__review__details">
+                      <img src="assets/customer-3.jpg" alt="customer" />
+                      <div>
+                        <h4>Mark Thompson</h4>
+                        <h5>Architect</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer area -->
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__column">
+          <h5><a href="#">Induz.</a></h5>
+          <p>
+            We strive to be at the forefront of technological advancements and
+            industry best practices, consistently exceeding the expectations of
+            our clients.
+          </p>
+          <div class="footer__socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Our Services</h4>
+          <ul class="footer__links">
+            <li><a href="#">Chemical Research</a></li>
+            <li><a href="#">Construction Material</a></li>
+            <li><a href="#">Agricultural Engineering</a></li>
+            <li><a href="#">Automotive & Systems</a></li>
+            <li><a href="#">Logistics</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Customer Service</h4>
+          <ul class="footer__links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">Copyright © 2025 Johan Lindell.</div>
+    </footer>
+
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="index.js"></script>
   </body>
