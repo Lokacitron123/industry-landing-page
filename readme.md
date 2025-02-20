@@ -28,7 +28,7 @@ All images used in the project are sourced from [Unsplash](https://unsplash.com/
 
 1. Clone the repository:
    ```sh
-   git clone git clone <repository-url>
+   git clone git clone git clone <repository-url>
    ```
 2. Navigate to the project folder:
    ```sh
